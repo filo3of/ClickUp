@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "npx cypress open --e2e --browser chrome",
-    "cy:run": "npx cypress run --e2e --browser chrome --headless"
+    "cy:run": "npx cypress run --e2e --browser chrome --headless",
+    "current:open": "npx cypress run --e2e --browser chrome --env grepTags=@current",
+    "current:run": "npx cypress run --e2e --browser chrome --headless --env grepTags=@current"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/filo3of/ClickUp#readme",
   "devDependencies": {
+    "@cypress/grep": "^4.1.0",
     "cypress": "^13.14.2",
     "cypress-mochawesome-reporter": "^3.8.2"
   }

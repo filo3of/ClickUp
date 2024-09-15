@@ -16,9 +16,17 @@ module.exports = defineConfig({
     inlineAssets: true,
     saveAllAttempts: false,
   },
+
+  env: {
+    grepFilterSpecs: true,
+    grepOmitFiltered: true,
+  },
+
   e2e: {
     setupNodeEvents(on, config) {
       require("cypress-mochawesome-reporter/plugin")(on);
+      require("@cypress/grep/src/plugin")(config);
+      return config;
     },
   },
 });
