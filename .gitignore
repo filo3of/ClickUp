@@ -1,0 +1,7 @@
+# Dependency directory
+node_modules
+# Apple file 
+.DS_Store
+cypress/.DS_Store
+# VS code settings
+.vscode

@@ -1,0 +1,23 @@
+{
+  "name": "clickup",
+  "version": "1.0.0",
+  "description": "Cypress automation tests with page object modal approach",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "npx cypress open --e2e --browser chrome",
+    "cy:run": "npx cypress run --e2e --browser chrome --headless"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filo3of/ClickUp.git"
+  },
+  "author": "Marko Bogicevic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filo3of/ClickUp/issues"
+  },
+  "homepage": "https://github.com/filo3of/ClickUp#readme",
+  "devDependencies": {
+    "cypress": "^13.14.2"
+  }
+}
