@@ -21,6 +21,10 @@ module.exports = defineConfig({
 
   env: {
     ...process.env,
+    hideCredentials: true,
+    hideCredentialsOptions: {
+      headers: ["authorization"],
+    },
     grepFilterSpecs: true,
     grepOmitFiltered: true,
   },

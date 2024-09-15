@@ -7,7 +7,11 @@
     "cy:open": "npx cypress open --e2e --browser chrome",
     "cy:run": "npx cypress run --e2e --browser chrome --headless",
     "current:open": "npx cypress open --e2e --browser chrome --env grepTags=@current",
-    "current:run": "npx cypress run --e2e --browser chrome --headless --env grepTags=@current"
+    "current:run": "npx cypress run --e2e --browser chrome --headless --env grepTags=@current",
+    "smoke:open": "npx cypress open --e2e --browser chrome --env grepTags=@smoke",
+    "smoke:run": "npx cypress run --e2e --browser chrome --headless --env grepTags=@smoke",
+    "api:open": "npx cypress open --e2e --browser chrome --env grepTags=@api",
+    "api:run": "npx cypress run --e2e --browser chrome --headless --env grepTags=@api"
   },
   "repository": {
     "type": "git",
@@ -23,6 +27,7 @@
     "@cypress/grep": "^4.1.0",
     "cypress": "^13.14.2",
     "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-plugin-api": "^2.11.2",
     "cypress-plugin-steps": "^1.1.1",
     "dotenv": "^16.4.5"
   }
