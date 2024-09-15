@@ -16,7 +16,7 @@ Cypress automation tests
   <a href="https://www.cypress.io/">
     <img src="https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg" alt="Cypress"/>
   </a>
-  <a href="https://github.com/filo3of/booker/blob/main/LICENSE">
+  <a href="https://github.com/filo3of/ClickUp/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"/>
   </a>
   <br />
