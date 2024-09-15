@@ -7,3 +7,5 @@ screenshots
 cypress/.DS_Store
 # VS code settings
 .vscode
+# Environment variables
+.env

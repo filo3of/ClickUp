@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("loading_wait", () => {
+  cy.step("wait for loading animation to end");
+
+  cy.get('div[class*="spinner"]').should("be.visible");
+
+  cy.get('div[class*="spinner"]', { timeout: 30000 }).should("not.exist");
+});

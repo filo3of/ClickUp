@@ -1,8 +1,10 @@
 const { defineConfig } = require("cypress");
+require("dotenv").config();
 
 module.exports = defineConfig({
   video: false,
   defaultCommandTimeout: 10000,
+  watchForFileChanges: false,
   retries: {
     runMode: 2,
     openMode: 0,
@@ -18,11 +20,14 @@ module.exports = defineConfig({
   },
 
   env: {
+    ...process.env,
     grepFilterSpecs: true,
     grepOmitFiltered: true,
   },
 
   e2e: {
+    baseUrl: "https://app.clickup.com",
+
     setupNodeEvents(on, config) {
       require("cypress-mochawesome-reporter/plugin")(on);
       require("@cypress/grep/src/plugin")(config);
