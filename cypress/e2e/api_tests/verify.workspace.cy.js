@@ -1,5 +1,5 @@
 describe("Verify workspace data", { tags: "@api" }, () => {
-  it("Verify workspace", () => {
+  it("Verify workspace using API", () => {
     cy.api({
       method: "GET",
       url: Cypress.config().baseUrl + "/api/v2/team",

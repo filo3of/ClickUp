@@ -2,6 +2,8 @@ class LoginPage {
   open_login_page() {
     cy.step("open login page");
 
+    cy.viewport("macbook-16");
+
     cy.visit("/login");
 
     cy.url().should("eq", Cypress.config().baseUrl + "/login");

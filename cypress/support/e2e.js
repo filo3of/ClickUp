@@ -20,6 +20,7 @@ import "./commands";
 import "cypress-mochawesome-reporter/register";
 import "cypress-plugin-steps";
 import "cypress-plugin-api";
+import "cypress-if";
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 

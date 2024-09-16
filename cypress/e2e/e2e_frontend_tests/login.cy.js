@@ -1,7 +1,7 @@
-import LoginPage from "../POM/login.page";
-import WorkspacePage from "../POM/workspace.page";
+import LoginPage from "../../POM/login.page";
+import WorkspacePage from "../../POM/workspace.page";
 
-describe("Login into web application", { tags: "@login" }, () => {
+describe("Login into web application", { tags: ["@login", "@smoke"] }, () => {
   it("Login into web application using correct credentials", () => {
     LoginPage.open_login_page()
       .enter_email(Cypress.env("EMAIL"))

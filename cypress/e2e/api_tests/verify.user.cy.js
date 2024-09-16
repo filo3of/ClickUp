@@ -1,5 +1,5 @@
 describe("Verify user data", { tags: "@api" }, () => {
-  it("Verify user", () => {
+  it("Verify user name using API", () => {
     cy.api({
       method: "GET",
       url: Cypress.config().baseUrl + "/api/v2/user",

@@ -1,5 +1,7 @@
-describe("Login using API", { tags: "@api" }, () => {
-  it("Login using API", () => {
+import Utility from "../../support/utility_functions";
+
+describe("Create a space", { tags: "@api" }, () => {
+  it("Create a new space using API", () => {
     cy.api({
       method: "GET",
       url: Cypress.config().baseUrl + "/api/v2/team",
@@ -22,7 +24,7 @@ describe("Login using API", { tags: "@api" }, () => {
           authorization: Cypress.env("TOKEN"),
         },
         body: {
-          name: "Test 00003",
+          name: Utility.uniqueTestName,
           multiple_assignees: true,
           features: {
             due_dates: {
@@ -60,7 +62,7 @@ describe("Login using API", { tags: "@api" }, () => {
       }).then((resp) => {
         expect(resp.status).to.eq(200);
 
-        expect(resp.body.name).to.eq("Test 00003");
+        expect(resp.body.name).to.eq(Utility.uniqueTestName);
       });
     });
   });
