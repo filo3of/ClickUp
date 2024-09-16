@@ -2,6 +2,7 @@
 node_modules
 reports
 screenshots
+cypress/downloads
 # Apple file 
 .DS_Store
 cypress/.DS_Store
