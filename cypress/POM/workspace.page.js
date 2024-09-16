@@ -52,6 +52,61 @@ class WorkspacePage {
     return this;
   }
 
+  click_three_dots_icon_on_specific_space(space) {
+    cy.step("click on three dots icon on specific space");
+
+    cy.get('[data-test="project-list-bar__scrollable"]')
+      .should("be.visible")
+      .find('[data-test*="project-row__name__"]')
+      .contains(space)
+      .should("be.visible")
+      .parentsUntil('[data-test*="project-list-bar-item__link__"]')
+      .find('button[data-test*="project-row__ellipsis__"]')
+      .should("be.visible")
+      .click();
+
+    return this;
+  }
+
+  click_delete_button() {
+    cy.step("click on delete button in the menu list");
+    cy.get('[data-test="nav-menu-item__name"]')
+      .contains("Delete")
+      .should("be.visible")
+      .click();
+
+    return this;
+  }
+
+  verify_delete_modal_is_opened(itemName) {
+    cy.step("verify that delete modal is opened");
+    cy.get("h2")
+      .contains("Delete: " + itemName)
+      .should("be.visible");
+
+    return this;
+  }
+
+  click_delete_button_on_modal() {
+    cy.step("click on delete button on modal view");
+    cy.get('[data-test="confirmation-modal__confirm-button"]')
+      .contains("Delete")
+      .should("be.visible")
+      .click();
+
+    return this;
+  }
+
+  enter_item_name_for_deleting(itemName) {
+    cy.step("enter item name for deleting confirmation");
+    cy.get('input[placeholder="' + itemName + '"]')
+      .should("be.visible")
+      .type(itemName)
+      .should("be.visible")
+      .and("have.value", itemName);
+    return this;
+  }
+
   click_folder_option() {
     cy.step('click on "folder" option');
 
