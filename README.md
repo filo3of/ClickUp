@@ -78,7 +78,7 @@ npm run cy:run
 
 - More info about scripts you can find in "package.json" file.
 
-## NOTE
+## Note
 
 Create .env file and add your own user credentials as it is shown in example .env file
 
