@@ -78,6 +78,10 @@ npm run cy:run
 
 - More info about scripts you can find in "package.json" file.
 
+## NOTE
+
+Create .env file and add your own user credentials as it is shown in example .env file
+
 ## License
 
 This project is licensed under the terms of the [MIT license](/LICENSE).

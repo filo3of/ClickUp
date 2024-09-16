@@ -1,6 +1,6 @@
 import Utility from "../../support/utility_functions";
 
-describe("Create a space", { tags: "@api" }, () => {
+describe("Create a space under existing workspace", { tags: "@api" }, () => {
   it("Create a new space using API", () => {
     cy.api({
       method: "GET",

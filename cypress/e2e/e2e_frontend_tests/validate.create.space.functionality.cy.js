@@ -3,7 +3,7 @@ import WorkspacePage from "../../POM/workspace.page";
 import ClickUp_API from "../../API/api_utility_functions";
 import Utility from "../../support/utility_functions";
 
-describe("Create a new space", { tags: "@smoke" }, () => {
+describe("Create a new space", { tags: ["@smoke", "@e2e"] }, () => {
   it("Create a new space using API, then login using UI and verify that new space is added", () => {
     ClickUp_API.create_a_space(
       "QA Workspace",

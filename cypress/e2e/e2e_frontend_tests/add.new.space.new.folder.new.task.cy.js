@@ -6,7 +6,7 @@ import ClickUp_API from "../../API/api_utility_functions";
 
 describe(
   "Add new space, folder, and task inside of the folder",
-  { tags: "@smoke", env: { snapshotOnly: true } },
+  { tags: ["@smoke", "@e2e"], env: { snapshotOnly: true } },
   () => {
     it("Add new space, new folder inside of the newly added space, and task inside of the folder", () => {
       ClickUp_API.create_a_space(

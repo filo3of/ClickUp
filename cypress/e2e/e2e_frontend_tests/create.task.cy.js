@@ -4,8 +4,8 @@ import ListPage from "../../POM/list.page";
 import Utility from "../../support/utility_functions";
 
 describe(
-  "Add new task using API and verify that task using UI",
-  { tags: "@smoke", env: { snapshotOnly: true } },
+  "Add new task under existing list",
+  { tags: ["@smoke", "@e2e"], env: { snapshotOnly: true } },
   () => {
     it("Add new task using API and verify that task using UI", () => {
       cy.api({

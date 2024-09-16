@@ -1,13 +1,17 @@
 import LoginPage from "../../POM/login.page";
 import WorkspacePage from "../../POM/workspace.page";
 
-describe("Login into web application", { tags: ["@login", "@smoke"] }, () => {
-  it("Login into web application using correct credentials", () => {
-    LoginPage.open_login_page()
-      .enter_email(Cypress.env("EMAIL"))
-      .enter_password(Cypress.env("PASSWORD"))
-      .click_login_button();
+describe(
+  "Login into web application",
+  { tags: ["@login", "@smoke", "@e2e"] },
+  () => {
+    it("Login into web application using correct credentials", () => {
+      LoginPage.open_login_page()
+        .enter_email(Cypress.env("EMAIL"))
+        .enter_password(Cypress.env("PASSWORD"))
+        .click_login_button();
 
-    WorkspacePage.verify_specific_workspace_is_opened("QA Workspace");
-  });
-});
+      WorkspacePage.verify_specific_workspace_is_opened("QA Workspace");
+    });
+  }
+);
