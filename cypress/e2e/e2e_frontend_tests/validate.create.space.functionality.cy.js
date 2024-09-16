@@ -29,5 +29,14 @@ describe("Create a new space", { tags: ["@smoke", "@e2e", "@current"] }, () => {
       .verify_delete_modal_is_opened()
       .enter_item_name_for_deleting(Utility.uniqueSpaceName)
       .click_delete_button_on_modal();
+
+    cy.get('[data-test="undo-toast-items__undo-row-text"]').should(
+      "be.visible"
+    );
+
+    cy.get('[data-test="project-list-bar__scrollable"]')
+      .should("be.visible")
+      .find('[data-test="project-row__name__' + spaceName + '"]')
+      .should("not.exist");
   });
 });
