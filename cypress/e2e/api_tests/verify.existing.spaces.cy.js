@@ -26,8 +26,6 @@ describe("Verify spaces data", { tags: "@api" }, () => {
       }).then((resp) => {
         expect(resp.status).to.eq(200);
 
-        expect(resp.body.spaces[1].id).to.eq("Marko Bogicevic");
-
         expect(resp.body.spaces[1].name).to.eq("Test 001");
       });
     });

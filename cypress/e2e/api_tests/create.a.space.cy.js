@@ -24,7 +24,7 @@ describe("Create a space under existing workspace", { tags: "@api" }, () => {
           authorization: Cypress.env("TOKEN"),
         },
         body: {
-          name: Utility.uniqueTestName,
+          name: Utility.uniqueSpaceName,
           multiple_assignees: true,
           features: {
             due_dates: {
@@ -62,7 +62,7 @@ describe("Create a space under existing workspace", { tags: "@api" }, () => {
       }).then((resp) => {
         expect(resp.status).to.eq(200);
 
-        expect(resp.body.name).to.eq(Utility.uniqueTestName);
+        expect(resp.body.name).to.eq(Utility.uniqueSpaceName);
       });
     });
   });

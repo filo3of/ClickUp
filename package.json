@@ -8,6 +8,8 @@
     "cy:run": "npx cypress run --e2e --browser chrome --headless",
     "current:open": "npx cypress open --e2e --browser chrome --env grepTags=@current",
     "current:run": "npx cypress run --e2e --browser chrome --headless --env grepTags=@current",
+    "e2e:open": "npx cypress open --e2e --browser chrome --env grepTags=@e2e",
+    "e2e:run": "npx cypress run --e2e --browser chrome --headless --env grepTags=@e2e",
     "smoke:open": "npx cypress open --e2e --browser chrome --env grepTags=@smoke",
     "smoke:run": "npx cypress run --e2e --browser chrome --headless --env grepTags=@smoke",
     "api:open": "npx cypress open --e2e --browser chrome --env grepTags=@api",

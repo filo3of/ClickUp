@@ -26,9 +26,13 @@ describe(
 
       cy.loading_wait();
 
-      WorkspacePage.click_plus_icon_on_specific_space(Utility.uniqueSpaceName)
-        .click_folder_option()
-        .verify_folder_creation_modal_is_opened()
+      WorkspacePage.click_plus_icon_on_specific_space(
+        Utility.uniqueSpaceName
+      ).click_folder_option();
+
+      cy.loading_wait();
+
+      WorkspacePage.verify_folder_creation_modal_is_opened()
         .enter_folder_name(Utility.uniqueFolderName)
         .click_create_button()
         .verify_modal_is_closed()
